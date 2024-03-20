@@ -1,0 +1,138 @@
+[
+  {
+    "WorkExperience": {
+      "titel": ["work experience", "Companies I have worked for in the past"],
+      "item": [
+        {
+          "number": "01",
+          "titelI": ["Google", "Interaction Designer"],
+          "description": "I currently am the lead designer on the interaction design team for Google Play."
+        },
+        {
+          "number": "02",
+          "titelI": ["Facebook", "Product Designer"],
+          "description": "I currently am the lead designer on the interaction design team for Google Play."
+        },
+        {
+          "number": "03",
+          "titelI": ["Facebook", "Product Designer"],
+          "description": "I currently am the lead designer on the interaction design team for Google Play."
+        }
+      ]
+    }
+  },
+
+  {
+    "main__peachBox": {
+      "title": ["Philosophy & values", "More about me"],
+      "item": "./img/Rectangle 39.jpg"
+    }
+  },
+  {
+    "skillset": {
+      "title": "Skillset",
+      "item": [
+        {
+          "src": "./img/skill-1_icon.svg",
+          "alt": "Product Design",
+          "heading": "Product Design"
+        },
+        {
+          "src": "./img/skill-2_icon.svg",
+          "alt": "Motion Design",
+          "heading": "Motion Design"
+        },
+        {
+          "src": "./img/skill-3_icon.svg",
+          "alt": "Visual Design",
+          "heading": "Visual Design"
+        },
+        {
+          "src": "./img/skill-4_icon.svg",
+          "alt": "Photography",
+          "heading": "Photography"
+        }
+      ]
+    }
+  },
+  {
+    "myProjects": {
+      "title": ["MY PROJECTS", "Work that I’ve done for the past 8 years"],
+      "item": [
+        {
+          "src": "./img/myProjects-item-img1.jpg",
+          "textBlockHeading": "Restaurant Website Design"
+        },
+        {
+          "src": "./img/myProjects-item-img2.jpg",
+          "textBlockHeading": "Restaurant Website Design"
+        },
+        {
+          "src": "./img/myProjects-item-img3.jpg",
+          "textBlockHeading": "Restaurant Website Design"
+        },
+        {
+          "src": "../img/myProjects-item-img4.jpg",
+          "textBlockHeading": "Restaurant Website Design"
+        }
+      ],
+      "btnVal": "VIEW ALL PROJECTS"
+    }
+  },
+  {
+    "inst": {
+      "title": ["Instagram", "Follow me on IG"],
+      "item": ["./img/inst-photo.jpg", "Philosophy & values"]
+    }
+  },
+  {
+    "dribble": {
+      "title": ["Dribbble", "Follow me on Dribbble"],
+      "item": ["./img/dribbble-img.png", "dribbble-img"]
+    }
+  },
+  {
+    "reviews": {
+      "title": [
+        "This is what people say about me",
+        "Here are a few lines from people who I have worked with over the past 8+ years in my design career.",
+        "See all testimonials"
+      ],
+      "item": [
+        {
+          "img": ["./img/reviews__cardBlock-card1.jpg", "CEO, Company 1"],
+          "reviews": "‘’I think Robin has an incredible gift. It has been an absolute pleasure to work with a designer of this caliber.’’",
+          "name": "Richard Owens",
+          "company": "CEO, Company 1"
+        },
+        {
+          "img": ["./img/reviews__cardBlock-card2.jpg", "CEO, Company 2"],
+          "reviews": "‘’Robin is one of the best designers I have worked with in my entire life. He is a designer who is very capable of taking up complex projects and delivers impeccable design.’’",
+          "name": "Emily Parker",
+          "company": "CEO, Company 2"
+        },
+        {
+          "img": ["./img/reviews__cardBlock-card3.jpg", "CEO, Company 3"],
+          "reviews": "‘’All I can say that, Robin is a phenomenal designer. Thewavelength at which he thinks is astoundaing. I love the focus, passion and attention to detial in the design.’’",
+          "name": "Vincent Rudd",
+          "company": "CEO, Company 3"
+        }
+      ]
+    }
+  },
+  {
+    "photo": {
+      "title": [
+        "Photography",
+        "Here is a collection of my best travel pictures that I took while travelling places all around the world."
+      ],
+      "btns": ["ITALY", "AUSTRALIA", "INDIA", "BRAZIL"],
+      "img": {
+        "img1": ["./img/photography-photoBlock-img1.jpg", "img1"],
+        "img2": ["./img/photography-photoBlock-img2.jpg", "img2"],
+        "img3": ["./img/photography-photoBlock-img3.jpg", "img3"],
+        "img4": ["./img/photography-photoBlock-img4.jpg", "img4"]
+      }
+    }
+  }
+]
