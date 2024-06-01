@@ -251,7 +251,7 @@ a {
   display: flex;
   min-height: 140px;
   border: 1px solid #181823;
-  max-width: 340px;
+
   justify-content: center;
   align-items: center;
 }
@@ -335,7 +335,7 @@ html {
 .main__reviews {
   display: flex;
   flex-direction: row;
-  margin-top: 240px;
+  margin-top: 120px;
 }
 
 .reviews__textBlock-h2 {
@@ -465,7 +465,6 @@ textarea {
 footer {
   background-color: #181823;
   width: 100%;
-  height: auto;
 }
 .footer__column {
   margin-top: 80px;
@@ -512,7 +511,9 @@ footer {
   grid-row: 1 / span 2;
   grid-column: 1;
 }
-
+.hidden {
+  display: none;
+}
 @media (max-width: 768px) {
   .hidden {
     display: none;
@@ -541,13 +542,14 @@ footer {
     z-index: -2;
   }
   .hero__textBlock {
-    width: 406px;
-    height: 515px;
+    width: 427px;
+    height: 554px;
+    margin-left: -120px;
+    z-index: 3;
   }
   .hero__textBlock-heroText {
     font-size: 56px;
     position: relative;
-    z-index: 3;
   }
   .wrapper__md {
     width: 688px;
@@ -557,9 +559,24 @@ footer {
     width: 384px;
     height: 600px;
   }
+  .main__wrapper-instagram {
+    gap: 0;
+  }
+  .instagram__photo {
+    width: 389px;
+    height: 604px;
+    margin-left: 80px;
+  }
+
+  .main__instagram-textBlock {
+    padding-left: 20px;
+  }
   .main__philosophy {
     width: 768px;
     height: 600px;
+  }
+  .philosophy__textBlock {
+    padding: 0 0 0 20px;
   }
   .philosophy__photo img {
     width: 384px;
@@ -576,18 +593,8 @@ footer {
   .main__skill-futerList {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 768px;
   }
-  .skill__futerList-item {
-    display: flex;
-    min-height: 140px;
-    border: 1px solid #181823;
-    max-width: 340px;
-    justify-content: center;
-    align-items: center;
-  }
+
   .main__myProjects {
     display: grid;
     grid-template-columns: repeat(1, 636px);
@@ -602,14 +609,69 @@ footer {
   .main__workExperience {
     display: flex;
     flex-direction: column;
-    max-width: 768px;
+    width: 760px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-  .dribbblie__textblock {
+  .main__dribbble {
+    padding-left: 0;
+  }
+  .dribbble__textblock {
     width: 688px;
     height: 212px;
+    padding-left: 20px;
   }
 
   .dribbblie__textblock-p {
     width: 688px;
+  }
+  .dribbble-img {
+    width: 688px;
+    height: 516px;
+    margin: 120px 40px 80px 40px;
+  }
+  .reviews__textBlock {
+    width: 346px;
+    height: 371px;
+    margin-left: 20px;
+  }
+  .reviews__textBlock-h2 {
+    width: 346px;
+  }
+  .reviews__cardBlock {
+    margin-left: 25px;
+  }
+  .reviews__cardBlock-card {
+    width: 332px;
+    height: 870px;
+  }
+  .reviews__cardBlock-card-img {
+    width: 331px;
+  }
+  .main__photography-photoBlock {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+  .main__form-textBlock {
+    width: 332px;
+    height: 337px;
+  }
+  .main__form-formBlock {
+    width: 332px;
+    height: 491px;
+  }
+  input {
+    width: 332px;
+  }
+  textarea {
+    width: 332px;
+  }
+  .form-formblock-btn {
+    width: 332px;
+  }
+  .footer__column {
+    justify-content: space-around;
   }
 }

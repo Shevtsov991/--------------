@@ -134,5 +134,19 @@
         "img4": ["./img/photography-photoBlock-img4.jpg", "img4"]
       }
     }
+  },
+  {
+    "formBlock": {
+      "title": [
+        "Let’s get started",
+        "Now that you know a lot about me, let me know if you are interested to work with me."
+      ],
+      "form": {
+        "name": "Name:",
+        "Email": "Email:",
+        "message": "Messge:",
+        "btn": "Let’s get started"
+      }
+    }
   }
 ]

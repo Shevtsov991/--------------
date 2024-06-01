@@ -8,6 +8,7 @@ const instSection = document.querySelector(".main__violetBox");
 const dribbleSection = document.querySelector(".main__dribbble");
 const reviewsSection = document.querySelector(".main__reviews");
 const photoSection = document.querySelector(".main__photography");
+const formSection = document.querySelector(".main__form");
 const sections = document.querySelectorAll(".section");
 const navBtn = document.getElementById("nav-btn");
 const navmenu = document.querySelector(".header__mobileMenu");
@@ -19,42 +20,7 @@ navBtn.addEventListener("click", () => {
 
 fetch(dataJsonEn)
   .then((responce) => responce.json())
-  .then((data) => WorkExpirence(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => peachBox(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => skillset(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => myProjects(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => inst(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => dribble(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => reviews(data))
-  .catch((error) => console.error("error"));
-
-fetch(dataJsonEn)
-  .then((responce) => responce.json())
-  .then((data) => photo(data))
+  .then((data) => rendering(data))
   .catch((error) => console.error("error"));
 
 console.log(sections);
@@ -87,30 +53,43 @@ function scrolActiv() {
     navLinks[start].classList.add("nav-active");
   });
 }
+
+function rendering(data) {
+  WorkExpirence(data);
+  peachBox(data);
+  skillset(data);
+  myProjects(data);
+  inst(data);
+  dribble(data);
+  reviews(data);
+  photo(data);
+  form(data);
+}
 function WorkExpirence(data) {
-  let firstBlock = `<div class ="main__text__workExperience"><span class="main__workExperience-p">${
-    data[0].WorkExperience.titel[0]
-  }</span>
+  let firstBlock = `
+  <div class ="main__text__workExperience">
+    <span class="main__workExperience-p">${
+      data[0].WorkExperience.titel[0]
+    }</span>
 
     <h2 class="main__workExperience-h2">${data[0].WorkExperience.titel[1]}</h2>
-</div>
+  </div>
     <div class ="experinceList ">${data[0].WorkExperience.item.map(
-      (val) => `<div class="experince-item">
+      (val) => `
+      <div class="experince-item">
       <p class="experience-num">${val.number}</p>
-      <div>
-      <span class="experience-val"><span style="color: #609bff ">${val.titelI[0]},</span>
-      ${val.titelI[1]}</span>
-      </div>
+    <div>
+      <span class="experience-val"><span style="color: #609bff ">${val.titelI[0]},</span>${val.titelI[1]}</span>
+    </div>
       <p class="expernce-discp">${val.description}</p>
-      </div>`
+    </div>`
     )}
-      
-      </div>
+  </div>
   `;
   workExperienceSection.innerHTML = firstBlock;
 }
 function peachBox(data) {
-  let secondBlock = `<div class="wrapper wrapper__md"><div class="main__philosophy">
+  let secondBlock = `<div class="main__philosophy">
   <div class="philosophy__textBlock">
     <h2 class="philosophy__textBlock-h2">${data[1].main__peachBox.title[0]}</h2>
     <p class="philosophy__textBlock-p">
@@ -124,7 +103,7 @@ function peachBox(data) {
   <div class="philosophy__photo">
     <img src="${data[1].main__peachBox.item}" alt="Philosophy & values" />
   </div>
-</div>
+
 </div>`;
   peachBoxSection.innerHTML = secondBlock;
 }
@@ -281,7 +260,6 @@ function myProjects(data) {
 function inst(data) {
   let fifthSection = `
   <div class="main__instagram">
-  <div class="wrapper wrapper__md">
     <div class="main__wrapper-instagram">
       <div class="main__instagram-textBlock">
         <h2 class="main__instagram-textBlock-h2">${data[4].inst.title[0]}</h2>
@@ -295,12 +273,11 @@ function inst(data) {
           >${data[4].inst.title[1]}</span
         >
       </div>
-      <div class="main__instagram-photo">
-        <img src="${data[4].inst.item[0]}" alt="${data[4].inst.item[1]}" />
-      </div>
+      
+        <img src="${data[4].inst.item[0]}" alt="${data[4].inst.item[1]}" class = "instagram__photo"/>
+      
     </div>
   </div>
-</div>
   `;
   instSection.innerHTML = fifthSection;
 }
@@ -419,4 +396,27 @@ function photo(data) {
   `;
   photoSection.innerHTML = eightSection;
 }
-function form(data) {}
+function form(data) {
+  let ninthSection = `
+  <div class="main__form-textBlock">
+          <h2 class="form-textBlock-h2">${data[8].formBlock.title[0]}</h2>
+          <p class="form-textBlock-p">${data[8].formBlock.title[0]}</p>
+        </div>
+        <form action="" class="main__form-formBlock">
+          <div class="form-formblock-name">
+            <label for="name">${data[8].formBlock.form.name}</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="form-formblock-email">
+            <label for="email">${data[8].formBlock.form.Email}</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form-formblock-messge">
+            <label for="msg">${data[8].formBlock.form.message}</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </div>
+          <button class="form-formblock-btn">${data[8].formBlock.form.btn}</button>
+        </form>
+        `;
+  formSection.innerHTML = ninthSection;
+}
